@@ -12,7 +12,7 @@ public class calUI {
 
         int op1 = s.nextInt();
         
-        System.out.println("사칙연산 입력 값 :");
+        System.out.println("연산기호 입력 :");
 
         String symbol = s.next();
         
