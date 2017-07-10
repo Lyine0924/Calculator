@@ -7,29 +7,32 @@ public class calUI {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 			Scanner s = new Scanner(System.in);
+			cal c = new cal();
 			int count = 1;
 	        System.out.println(count + "번째 입력 값 : ");
 
-	        int op1 = s.nextInt();
+	        int op1 = c.getFirstValue(s);
+	        //System.out.println(op1);
 	        int result = op1;
 	        while(true){
 	        	count ++;
 	        	System.out.println("연산기호 입력 :");
-
-		        String symbol = s.next();
+	        	
+		        String symbol = c.getSymbol(s);
 		        
 		        if(symbol.equals("quit")){
-		        	System.out.println("최종 결과 값 : " + result);
+		        	c.print(result);
 		        	break;
 		        }
 		        
 		        System.out.println(count +"번째 입력 값 : ");
 		        
-		        int op2 = s.nextInt();
+		        int op2 = c.getSecondValue(s);
 		        
-		        cal c1 = new cal();
-		        
-		        if(symbol.equals("+")){
+		        result = c.Calculate(symbol, result, op2);
+		        //System.out.println(result);
+		        /*cal c1 = new cal();*/
+		        /*if(symbol.equals("+")){
 		        	result = c1.sum(result, op2);
 		        	 System.out.println("덧셈 결과 : " + result);
 		        }
@@ -47,7 +50,7 @@ public class calUI {
 		        }
 		        else {
 		        	System.out.println("사친연산 기호가 잘못되었습니다.");
-		        }
+		        }*/
 	        }
 	}
 }
