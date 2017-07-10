@@ -40,7 +40,6 @@ public class calUI {
 		        	result =  c1.sub(result, op2);
 		        	 System.out.println("뻴셈 결과 : " + result);
 		        }
-		        else if(symbol.equals("*")){
 		        	result = c1.mul(result, op2);
 		        	System.out.println("곱셈 결과 : " + result);
 		        }

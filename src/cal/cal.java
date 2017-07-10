@@ -9,18 +9,18 @@ public class cal {
 	private int result = 0;
 	
 	public int getFirstValue(Scanner scanner){
-		//this.op1 = scanner.nextInt();
-		return scanner.nextInt();
+		this.op1 = scanner.nextInt();
+		return this.op1;
 	}
 	
 	public int getSecondValue(Scanner scanner){
-		//this.op2 = scanner.nextInt();
-		return scanner.nextInt();
+		this.op2 = scanner.nextInt();
+		return this.op2;
 	}
 	
 	public String getSymbol(Scanner scanner){
-		//this.symbol=scanner.next();
-		return scanner.next();
+		this.symbol=scanner.next();
+		return this.symbol;
 	}
 	
 	public int Calculate(String symbol,int first,int second){
@@ -40,7 +40,9 @@ public class cal {
 			case "/" : {
 				if(second==0)
 				{
-					System.out.println("0으로 나눌 수 없습니다.");
+					System.out.println("0으로 나눌 수 없습니다. 다시 입력");
+					this.result = first;
+					break;
 				}
 				else
 					this.result = first / second;
